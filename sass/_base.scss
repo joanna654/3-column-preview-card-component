@@ -1,0 +1,71 @@
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$very-light-gray: hsl(0, 0%, 95%); //(background, headings, buttons)
+$white: hsla(0, 0%, 100%, 1);
+$primary-font-family: "Lexend Deca", sans-serif;
+$header-font-family: "Big Shoulders Display", sans-serif;
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 50em) {
+      @content;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $primary-font-family;
+  font-size: 62.5%;
+  @include for-size(phone-only) {
+    font-size: 58%;
+  }
+}
+
+p {
+  color: $transparent-white;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 8.3rem;
+}
+.header {
+  color: $very-light-gray;
+  text-transform: uppercase;
+  font-family: $header-font-family;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  padding-top: 3.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.section {
+  padding: 4.8rem 4.75rem;
+}
+
+.section-1 {
+  background-color: $bright-orange;
+}
+
+.section-2 {
+  background-color: $dark-cyan;
+}
+
+.section-3 {
+  background-color: $very-dark-cyan;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

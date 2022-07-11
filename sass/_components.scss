@@ -1,0 +1,24 @@
+.btn {
+  background: $very-light-gray;
+  border-radius: 2.5rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding: 1.2rem 3.15rem;
+  border: none;
+  &-1 {
+    color: $bright-orange;
+  }
+  &-2 {
+    color: $dark-cyan;
+  }
+  &-3 {
+    color: $very-dark-cyan;
+  }
+  &:hover {
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: $white;
+    cursor: pointer;
+  }
+}
